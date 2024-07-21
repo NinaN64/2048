@@ -10,9 +10,47 @@ namespace GameProject
             WriteNewNumber(board);
 
             WriteCurrentBoard(board);
+
+            while(true)
+            {
+                var command = Console.ReadKey().Key;
+
+                switch(command)
+                {
+                    case ConsoleKey.W:
+                        EverythingUp();
+                        break;
+                    case ConsoleKey.D:
+                        EverythingRight();
+                        break;
+                    case ConsoleKey.S:
+                        EverythingDown();
+                        break;
+                    case ConsoleKey.A:
+                        EverythingLeft();
+                        break;
+                }
+                WriteCurrentBoard(board);
+            }
             
         }
 
+        static void EverythingUp()
+        {
+            
+        }
+        static void EverythingRight()
+        {
+            
+        }
+        static void EverythingDown()
+        {
+            
+        }
+        static void EverythingLeft()
+        {
+            
+        }
         static void WriteCurrentBoard(List<List<int>> board)
         {
             for(int i = 0; i < board.Count(); i++)
